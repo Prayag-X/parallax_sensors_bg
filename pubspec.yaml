@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  sensors_plus:
 
 dev_dependencies:
   flutter_test:
