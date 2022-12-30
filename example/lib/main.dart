@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:parallax_sensors_bg/parallax_sensors_bg.dart';
+import 'package:flutter/services.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'example1.dart';
+import 'example2.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+      overlays: [SystemUiOverlay.bottom]);
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(const MyApp());
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -15,28 +24,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Parallax Background Demo'),
-      ),
-      body: ParallaxBackground(
-        sensor: ParallaxSensor.accelerometer,
-        layers: [Layer(
-          sensitivity: 10,
-          image: const AssetImage('assets/background.jpg'),
-          preventCrop: true,
-        ),]
-      ),
+      home: const Example1(),
+      //const Example2(),
     );
   }
 }
