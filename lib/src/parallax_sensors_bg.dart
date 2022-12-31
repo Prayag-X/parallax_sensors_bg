@@ -56,31 +56,31 @@ class Layer {
   /// Height of the **[image]**.
   ///
   /// ---
-  /// **Note:** It will be ignored if **[preventCrop]** is set to true
+  /// **Note:** It will be ignored if **[preventCrop]** is set to true.
   final double? imageHeight;
 
   /// Width of the **[image]**.
   ///
   /// ---
-  /// **Note:** It will be ignored if **[preventCrop]** is set to true
+  /// **Note:** It will be ignored if **[preventCrop]** is set to true.
   final double? imageWidth;
 
   /// Blurs the **[image]**.
   ///
-  /// Value can be any positive fractional number
+  /// Value can be any positive fractional number.
   double? imageBlurValue;
 
   /// Darkens the **[image]**.
   ///
-  /// Value ranges from 0 to 1
+  /// Value ranges from 0 to 1.
   double? imageDarkenValue;
 
   /// Opacity of the layer.
   ///
-  /// Value ranges from 0 to 1
+  /// Value ranges from 0 to 1.
   double? opacity;
 
-  /// Any widget that will also move
+  /// Any widget that will also move.
   final Widget? child;
 
   /// Function to build the layer.
@@ -212,19 +212,19 @@ class Parallax extends StatefulWidget {
   /// layer1 will be at the bottom
   /// (farthest to viewer from parallax perspective)
   /// followed by layer2 and layer3 will be the topmost
-  /// (nearest to viewer from parallax perspective)
+  /// (nearest to viewer from parallax perspective).
   final List<Layer> layers;
 
-  /// Reverses the movement of vertical axis
+  /// Reverses the movement of vertical axis.
   final bool reverseVerticalAxis;
 
-  /// Reverses the movement of horizontal axis
+  /// Reverses the movement of horizontal axis.
   final bool reverseHorizontalAxis;
 
-  /// Stops the movement of vertical axis
+  /// Stops the movement of vertical axis.
   final bool lockVerticalAxis;
 
-  /// Stops the movement of horizontal axis
+  /// Stops the movement of horizontal axis.
   final bool lockHorizontalAxis;
 
   /// The duration it takes for the movement change to complete.
@@ -233,7 +233,7 @@ class Parallax extends StatefulWidget {
   /// of the sensor too slow. Ideal value is from 200 to 400.
   final int animationDuration;
 
-  /// The fixed body above the parallax layer
+  /// The fixed page body above the parallax layer.
   final Widget? child;
 
   @override
