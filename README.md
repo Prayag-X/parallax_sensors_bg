@@ -11,6 +11,8 @@ detection (Accelerometer, Gyroscope, User accelerometer, Magnetometer)
   </tr>
 </table>
 
+<br>
+
 ## Features
 
 <ul>
@@ -28,6 +30,8 @@ detection (Accelerometer, Gyroscope, User accelerometer, Magnetometer)
   </li>
 </ul>
 
+<br>
+
 ## Getting started
 
 Add dependency in ```pubspec.yaml``` and run ```flutter pub get```
@@ -40,6 +44,8 @@ Now import the package in your code:
 ```dart
 import 'package:parallax_sensors_bg/parallax_sensors_bg.dart';
 ```
+
+<br>
 
 ## Usage
 
@@ -70,18 +76,22 @@ Parallax(
 ),
 ```
 
+<br>
+
 ## **Parallax** class arguments:
 
 Argument | Type | Default | Description
 --- | --- | --- | ---
 sensor | `ParallaxSensor` | `ParallaxSensor.accelerometer` | Type of the sensor whose detected values will be used for parallax movement. (`accelerometer`, `userAccelerometer`, `gyroscope`, `magnetometer`).
 layers | `List<Layer>` | `required` | Individual layers for the parallax effect. The declaration of the layers sequentially are positioned from bottom to top (Farthest to nearest from parallax perspective).
-reverseVerticalAxis | `bool` | `false` | Reverses the movement of vertical axis
-reverseHorizontalAxis | `bool` | `false` | Reverses the movement of horizontal axis
-lockVerticalAxis | `bool` | `false` | Stops the movement of vertical axis
-lockHorizontalAxis | `bool` | `false` | Stops the movement of horizontal axis
+reverseVerticalAxis | `bool` | `false` | Reverses the movement of vertical axis.
+reverseHorizontalAxis | `bool` | `false` | Reverses the movement of horizontal axis.
+lockVerticalAxis | `bool` | `false` | Stops the movement of vertical axis.
+lockHorizontalAxis | `bool` | `false` | Stops the movement of horizontal axis.
 animationDuration | `int` | `300` | The duration in milliseconds it takes for the movement change to complete. Ideal value is from `200` to `400`.
 child | `Widget?` | `null` | The fixed body of the page, above the parallax layer.
+
+<br>
 
 ## **Layer** class arguments:
 
@@ -91,3 +101,9 @@ sensitivity | `double` | `required` | Moving sensitivity of the layer.
 offset | `Offset?` | `null` | Position of the layer from the center.
 image | `ImageProvider<Object>?` | `null` | Image that the layer will show. By default, the image will take the size of the screen.
 imageFit | `BoxFit` | `BoxFit.cover` | BoxFit type of the image.
+imageHeight | `double?` | `null` | Height of the `image`.
+imageWidth | `double?` | `null` | Width of the `image`.
+preventCrop | `bool` | `false` | If set to true, it will ignore the `imageHeight` and `imageWidth` if given and will set the height and width of the `image` slightly more than the screen size such that it doesn't get cropped even at the extreme value of the `sensor`.
+imageBlurValue | `double?` | `null` | Blurs the `image`. Value can be any positive fractional number.
+imageDarkenValue | `double?` | `null` | Darkens the `image`. Value ranges from `0` to `1`.
+opacity | `double?` | `null` | Opacity of the layer. Value ranges from `0` to `1`.
