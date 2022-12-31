@@ -2,6 +2,7 @@ name: parallax_sensors_bg
 description: A new Flutter package project.
 version: 0.0.1
 repository: https://github.com/Prayag-X/parallax_sensors_bg
+issue_tracker: https://github.com/Prayag-X/parallax_sensors_bg/issues
 
 environment:
   sdk: '>=2.18.5 <3.0.0'
@@ -16,6 +17,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+
+flutter:
 
 platforms:
   android:
