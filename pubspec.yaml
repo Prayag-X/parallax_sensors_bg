@@ -1,6 +1,6 @@
 name: parallax_sensors_bg
 description: Flutter package to simplify giving a parallax effect in the background of a page that responds to a corresponding sensor detection.
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/Prayag-X/parallax_sensors_bg
 issue_tracker: https://github.com/Prayag-X/parallax_sensors_bg/issues
 
