@@ -6,8 +6,8 @@ detection (Accelerometer, Gyroscope, User accelerometer, Magnetometer)
 
 <table>
   <tr>
-    <td><img src="https://github.com/Prayag-X/parallax_sensors_bg/blob/main/assets/example1.gif" height="600"></td>
-    <td><img src="https://github.com/Prayag-X/parallax_sensors_bg/blob/main/assets/example2.gif" height="600"></td>
+    <td><img src="https://raw.githubusercontent.com/Prayag-X/parallax_sensors_bg/main/assets/example1.gif" height="600"></td>
+    <td><img src="https://raw.githubusercontent.com/Prayag-X/parallax_sensors_bg/main/assets/example2.gif" height="600"></td>
   </tr>
 </table>
 
