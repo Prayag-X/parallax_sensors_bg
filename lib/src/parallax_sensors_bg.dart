@@ -252,7 +252,8 @@ class _ParallaxState extends State<Parallax> {
     switch (widget.sensor) {
       case ParallaxSensor.accelerometer:
         _accelerometerSensorEvent =
-            accelerometerEvents.listen((AccelerometerEvent event) {
+            accelerometerEventStream(samplingPeriod: SensorInterval.uiInterval)
+                .listen((AccelerometerEvent event) {
           setState(() {
             _maxSensitivity = 10;
             _top = widget.lockVerticalAxis
@@ -280,8 +281,9 @@ class _ParallaxState extends State<Parallax> {
         break;
 
       case ParallaxSensor.userAccelerometer:
-        _userAccelerometerSensorEvent =
-            userAccelerometerEvents.listen((UserAccelerometerEvent event) {
+        _userAccelerometerSensorEvent = userAccelerometerEventStream(
+                samplingPeriod: SensorInterval.uiInterval)
+            .listen((UserAccelerometerEvent event) {
           setState(() {
             _maxSensitivity = 10;
             _top = widget.lockVerticalAxis
@@ -309,7 +311,9 @@ class _ParallaxState extends State<Parallax> {
         break;
 
       case ParallaxSensor.gyroscope:
-        _gyroscopeSensorEvent = gyroscopeEvents.listen((GyroscopeEvent event) {
+        _gyroscopeSensorEvent =
+            gyroscopeEventStream(samplingPeriod: SensorInterval.uiInterval)
+                .listen((GyroscopeEvent event) {
           setState(() {
             _maxSensitivity = 10;
             _top = widget.lockVerticalAxis
@@ -338,7 +342,8 @@ class _ParallaxState extends State<Parallax> {
 
       case ParallaxSensor.magnetometer:
         _magnetometerSensorEvent =
-            magnetometerEvents.listen((MagnetometerEvent event) {
+            magnetometerEventStream(samplingPeriod: SensorInterval.uiInterval)
+                .listen((MagnetometerEvent event) {
           setState(() {
             _maxSensitivity = 50;
             _top = widget.lockVerticalAxis
